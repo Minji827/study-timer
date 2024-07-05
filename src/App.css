@@ -1,0 +1,91 @@
+/* src/App.css */
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.mode-toggle input {
+  display: none;
+}
+
+.mode-switch-label {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mode-switch-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  background-color: #ccc;
+  padding: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.mode-switch-switch {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s;
+}
+
+.icon {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sun-icon {
+  color: #f39c12;
+  left: 8px;
+}
+
+.moon-icon {
+  color: #f1c40f;
+  right: 8px;
+}
+
+input:checked + .mode-switch-label .mode-switch-inner {
+  background-color: #282c34;
+}
+
+input:checked + .mode-switch-label .mode-switch-switch {
+  transform: translateX(26px);
+}
+
+.light-mode {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.dark-mode {
+  background-color: #282c34;
+  color: #fff;
+}
